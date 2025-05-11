@@ -1,0 +1,9 @@
+Are the results what you expected? 
+Speculate as to why it looks like CUDA isn't a great solution for this problem.
+- They definitely are not what I expected. I did not think that the cpu would even compete with a GPU that
+  parallelizes its computations.
+- My guess as to why the results were the way they were is that since it is a vector being computed (contiguous memory)
+  and since the vector is made of long's, that dividing it into multiple threads yes divides and conquers, but 
+  is required to access so many long's (8 byte pieces of memory) that it is constantly needing to reload the cache
+  and requires many bus operations. While the cpu processes it linearly, accessing memory in order and updating the
+  cacheline less while utilizing it completely (no unnecessary data being skipped over)
