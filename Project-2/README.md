@@ -18,13 +18,16 @@
 |72| 1.87|17.59|50.39| 7.64|
 |80| 1.91|17.85|26.96| 7.48|
 
+![image](https://github.com/user-attachments/assets/28b0a897-51f6-4821-b460-44e26b6ce7c2)
+
 Question: Notice that there is a maximum speed-up factor, but not necessarily using the most threads. Make a guess (i.e., write a short paragraph) as to why you think more threads aren't necessary better. Here's a hint: think about a group of people waiting to go through a turnstile (like at BART or Disney World). Are more people able to go through it just because there are more people?
  -I think that as the amount of threads increase that there comes a point that we no longer gain anything from using more threads. This is because making more threads becomes more of a problem when they have to share resources like memory, cache, or I/O. Too many threads can also lead to overhead from context switching and sync delays. In short, creating and executing more threads eventually outweighs the performance gains and can even slow a program down (bottleneck).
 
 Question: Do you think it's possible to get "perfect scaling" — meaning that the $(1-p)$ terms is zero?
  -I do not think it is possible to get perfect scaling. For this to be true, the entire program would have to be able to be parallelizable and in most, if not all cases, there is some set-up that can not be parallelized. 
 
-$$ 16 cores $$
+$$ computing for 16 cores: $$
+
 $$ serial = \frac{0.010163129 + 0.000000716}{1.774976347} = 0.0569 $$
 $$ speedup = \frac{1}{1 - 0.9431 + \frac{0.9431}{16}} = 1.892326616 $$
 
