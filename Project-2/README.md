@@ -26,7 +26,7 @@ Question: Notice that there is a maximum speed-up factor, but not necessarily us
 Question: Do you think it's possible to get "perfect scaling" — meaning that the $(1-p)$ terms is zero?
  -I do not think it is possible to get perfect scaling. For this to be true, the entire program would have to be able to be parallelizable and in most, if not all cases, there is some set-up that can not be parallelized. 
 
-$$ computing for 16 cores: $$
+$$ computing  for  16 cores: $$
 
 $$ serial = \frac{0.010163129 + 0.000000716}{1.774976347} = 0.0569 $$
 $$ speedup = \frac{1}{1 - 0.9431 + \frac{0.9431}{16}} = 1.892326616 $$
