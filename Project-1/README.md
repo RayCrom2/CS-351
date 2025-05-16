@@ -1,7 +1,4 @@
-# CS-351
-**P.I. = performance improvement**
-
-|Hash #|Optimization|Real Time|User Time|System Time|Memory Usage<br>(KB)|Throughput|P.I|
+|Hash #|Optimization|Real Time|User Time|System Time|Memory Usage<br>(KB)|Throughput|Performance<br>Improvement|
 |:--:|--:|--:|--:|--:|--:|--:|:--:|
 |hash-00|g-Optimization|340.18s|333.49s|4.71s|2900|95.7 units/s|–|
 |hash--01|g-Optimization|17.79s|16.3s|1.35s|2900|1826.6 units/s|19.1%|
