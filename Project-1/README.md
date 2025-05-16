@@ -14,12 +14,12 @@
 **What operation do you think accounts for most of hash-00's runtime?**
 <br>> I think the way hash-00 reads the data from an input file one at a time contributes to most of its runtime.
 hash-01 and hash-02 both dynamically allocate memory for each hash computation.  
-**Is there much difference time-wise between their two allocation methods?**
+<br>**Is there much difference time-wise between their two allocation methods?**
 <br>> The difference between the two is that hash-01 allocates its memory onto the heap while hash-02 puts uses memory from the stack. Performance-wise, hash-02 is always a O(1) operation while hash-01 is amortized and may be greater than O(1) and has a chance at being further apart resulting in more cache misses.
 hash-03 avoids the allocation by using a fixed-size array.  
-**Is there an appreciable speed difference?**
+<br>**Is there an appreciable speed difference?**
 <br>> In respect to hash-0, I would say there is an appreciable difference, however, it is not far off from the other methods.
-**Why is hash-04's memory usage so much larger than any of the other versions?  Hint: recall when we discussed how the operating system reads a file and makes it available to an application.  Specifically, the O/S will transfer data from disk to its own memory, and then copy from there into buffers provided by the application.  In the memory map case, the O/S is merely sharing the copy of the file's data that is in its (the O/S's) memory, and not making an additional copy from its memory into memory only in the application**
+<br>**Why is hash-04's memory usage so much larger than any of the other versions?  Hint: recall when we discussed how the operating system reads a file and makes it available to an application.  Specifically, the O/S will transfer data from disk to its own memory, and then copy from there into buffers provided by the application.  In the memory map case, the O/S is merely sharing the copy of the file's data that is in its (the O/S's) memory, and not making an additional copy from its memory into memory only in the application**
 <br>> It is so much larger because of our ' void* memory = mmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);' command which takes the whole input file and stores it inside the page cache. We can now access it directly without using the input file more than once, but it uses a lot more memory.
-**What other compiler options did you try, and did they help at all?**
+<br>**What other compiler options did you try, and did they help at all?**
 <br>> I tried -j4-8 but couldn't get it to work, I also tried -O1 and it seemed to give slightly longer or similar times to -O2. Using -O4, however, did seem to give me consistently faster times tahn both -g and -O2.
