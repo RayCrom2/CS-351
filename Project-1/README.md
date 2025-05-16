@@ -12,7 +12,7 @@
 |hash--04|O2-Optimization|7.36s|6.65s|0.57s|5010096|4415.2 units/s|45.6%|
 
 **What operation do you think accounts for most of hash-00's runtime?**
-<br> >I think the way hash-00 reads the data from an input file one at a time contributes to most of its runtime.
+> I think the way hash-00 reads the data from an input file one at a time contributes to most of its runtime.
 hash-01 and hash-02 both dynamically allocate memory for each hash computation.  
 **Is there much difference time-wise between their two allocation methods?**
 <br>   The difference between the two is that hash-01 allocates its memory onto the heap while hash-02 puts uses memory from the stack. Performance-wise, hash-02 is always a O(1) operation while hash-01 is amortized and may be greater than O(1) and has a chance at being further apart resulting in more cache misses.
