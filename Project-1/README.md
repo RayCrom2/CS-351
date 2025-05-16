@@ -1,5 +1,21 @@
 # CS-351
 (P.I. = performance improvement)
+
+|Hash #|Optimization|Real Time|User Time|System Time|Memory Usage<br>(KB)|Throughput|P.I|
+|:--:|--:|--:|--:|--:|--:|--:|:--:|
+|hash-00|g-Optimization|340.18s|333.49s|4.71s|2900|95.7 units/s|–|
+|hash-00|O2-Optimization|335.26s|327.44s|4.64s|2904|98.4 units/s|–|
+|hash--01|g-Optimization|17.79s|16.3s|1.35s|2900|1826.6 units/s|19.1%|
+|hash--01|O2-Optimization|8.3s|6.89s|1.28s|2896|3914.2 units/s|40.4%|
+|hash--02|g-Optimization|15.77s|14.22s|1.27s|3480|2060.6 units/s|21.6%|
+|hash--02|O2-Optimization|8.32s|6.84s|1.33s|2892|3904.8 units/s|40.3%|
+|hash--03|g-Optimization|16.7s|15.2s|1.18s|2932|1945.9 units/s|20.4%|
+|hash--03|O2-Optimization|8.21s|6.79s|1.3s|3508|3957.1 units/s|40.8%|
+|hash--04|g-Optimization|14.75s|13.88s|0.57s|5011832|2203.1 units/s|23.1%|
+|hash--04|O2-Optimization|7.36s|6.65s|0.57s|5010096|4415.2 units/s|45.6%|
+
+
+
 g-Optimization         |     O2-Optimization         
                   **hash-00**
 real    340.18s              real    335.26s              
